@@ -1,0 +1,33 @@
+### 1. Register a new user
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "testpassword"
+}
+
+###
+
+### 2. Login to get the JWT token
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "testpassword"
+}
+
+###
+
+### 3. Search for weather data
+GET http://localhost:3000/api/weather?location=Delhi
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI2NDA3NjI1LCJleHAiOjE3MjY0MTEyMjV9.e-vhYyLaNMHEsFpB5d4EXvMxes765eZLBnWcZCunipc
+
+###
+
+### 4. Retrieve the search history
+GET http://localhost:3000/api/history
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI2NDA3NjI1LCJleHAiOjE3MjY0MTEyMjV9.e-vhYyLaNMHEsFpB5d4EXvMxes765eZLBnWcZCunipc
